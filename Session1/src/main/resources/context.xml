@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--Disable anyone of the DI and make changes in the User class accordingly-->
+
+<!--    Dependancy injection using Setter method-->
+<!--    <bean id="user" class="com.company.User">-->
+<!--        <property name="car" ref="car"/>-->
+<!--    </bean>-->
+
+<!--    Dependancy injection using Constructor-->
+    <bean id="user" class="com.company.User">
+        <constructor-arg ref="car"/>
+    </bean>
+
+
+    <bean id="car" class="com.company.Car">
+        <property name="perdayCost" value="100"/>
+        <property name="name" value="Audi" />
+
+    </bean>
+
+</beans>
